@@ -1,0 +1,28 @@
+.DS_Store
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+# Local notebooks / scratch files
+Untitled.ipynb
+Search_Engine_Mastery_Schema.md
+
+# Private/local explanatory notes
+docs/
+explain_like_10/
+
+# Large raw data
+data/books/
+data/metadata.csv
+data/Assignment_1.pdf
+
+# Disk-backed index and derived artifacts
+processed/
+results/
+
+# LaTeX build artifacts
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.pdf
