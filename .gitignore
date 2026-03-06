@@ -18,11 +18,9 @@ data/Assignment_1.pdf
 
 # Disk-backed index and derived artifacts
 processed/
-results/
 
-# LaTeX build artifacts
-report/*.aux
-report/*.log
-report/*.out
-report/*.toc
-report/*.pdf
+# Keep experiment outputs in git
+# (results/ intentionally tracked)
+
+# Report and LaTeX artifacts (local only)
+report/

@@ -1,0 +1,47 @@
+Evaluation Summary
+Models: structured vs TF-IDF cosine vs BM25
+Top-k evaluated: 10 and 100
+
+Query 1: to be, or not to be
+  structured vs tfidf -> Intersection@10=0, Intersection@100=0, displacement@100=100.000
+  structured vs bm25 -> Intersection@10=0, Intersection@100=1, displacement@100=9.000
+  tfidf vs bm25 -> Intersection@10=0, Intersection@100=0, displacement@100=100.000
+  Avg top10 doc length -> structured:87837.20, tfidf:2942.70, bm25:182769.10
+
+Query 2: English Grammar
+  structured vs tfidf -> Intersection@10=1, Intersection@100=6, displacement@100=33.000
+  structured vs bm25 -> Intersection@10=3, Intersection@100=10, displacement@100=22.900
+  tfidf vs bm25 -> Intersection@10=0, Intersection@100=30, displacement@100=25.367
+  Avg top10 doc length -> structured:147857.10, tfidf:8643.20, bm25:176689.50
+
+Query 3: Philip K Dick
+  structured vs tfidf -> Intersection@10=0, Intersection@100=2, displacement@100=40.000
+  structured vs bm25 -> Intersection@10=0, Intersection@100=0, displacement@100=100.000
+  tfidf vs bm25 -> Intersection@10=1, Intersection@100=29, displacement@100=27.103
+  Avg top10 doc length -> structured:72513.10, tfidf:10632.90, bm25:77795.00
+
+Query 4: Jabberwocky
+  structured vs tfidf -> Intersection@10=0, Intersection@100=0, displacement@100=100.000
+  structured vs bm25 -> Intersection@10=0, Intersection@100=0, displacement@100=100.000
+  tfidf vs bm25 -> Intersection@10=8, Intersection@100=43, displacement@100=4.140
+  Avg top10 doc length -> structured:0.00, tfidf:34402.10, bm25:53942.20
+
+Query 5: Gutenberg
+  structured vs tfidf -> Intersection@10=0, Intersection@100=5, displacement@100=10.200
+  structured vs bm25 -> Intersection@10=0, Intersection@100=24, displacement@100=55.292
+  tfidf vs bm25 -> Intersection@10=0, Intersection@100=10, displacement@100=35.400
+  Avg top10 doc length -> structured:423866.30, tfidf:2942.70, bm25:39745.70
+
+Query 6: Dornröschen
+  structured vs tfidf -> Intersection@10=0, Intersection@100=0, displacement@100=100.000
+  structured vs bm25 -> Intersection@10=0, Intersection@100=0, displacement@100=100.000
+  tfidf vs bm25 -> Intersection@10=8, Intersection@100=77, displacement@100=14.416
+  Avg top10 doc length -> structured:0.00, tfidf:49664.50, bm25:41542.00
+
+Aggregate
+| Pair | Mean Intersection@10 | Mean Intersection@100 | Mean displacement@100 |
+|---|---:|---:|---:|
+| structured vs tfidf | 0.167 | 2.167 | 63.867 |
+| structured vs bm25 | 0.500 | 5.833 | 64.532 |
+| tfidf vs bm25 | 2.833 | 31.500 | 34.404 |
+Mean top10 doc length by model: structured=122012.28, tfidf=18204.68, bm25=95413.92
